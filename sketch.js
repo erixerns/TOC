@@ -25,6 +25,7 @@ function setup() {
 }
 
 function draw() {
+  mouseHover();
   background(255);
   checkStates();
   text('States', 100, 400);
@@ -152,7 +153,7 @@ var Speaker = function (x, y) {
     stroke(255);
     ellipse(this.powerX, this.powerY, 30);
     stroke(255);
-    line(this.powerX, this.y+10, this.x + 25, this.y + 25);
+    line(this.powerX, this.y + 10, this.x + 25, this.y + 25);
     pop();
   };
 
@@ -227,46 +228,70 @@ function mouseReleased() {
   // powerButton
   if (dist(mouseX, mouseY, speaker.powerX, speaker.powerY) < 15) {
     speaker.isPowered = !speaker.isPowered;
-  } 
-  else if (dist(mouseX, mouseY, speaker.playX, speaker.playY) < 15) {
+  } else if (dist(mouseX, mouseY, speaker.playX, speaker.playY) < 15) {
     if (speaker.isConnected && speaker.isCharged) {
       speaker.isPlaying = !speaker.isPlaying;
       speaker.isNext = false;
       speaker.isPrev = false;
     }
-  } 
-  else if (dist(mouseX, mouseY, speaker.nextX, speaker.nextY) < 15) {
+  } else if (dist(mouseX, mouseY, speaker.nextX, speaker.nextY) < 15) {
     if (speaker.isConnected && speaker.isCharged) {
       speaker.isPlaying = false;
       speaker.isPrev = false;
       speaker.isNext = true;
     }
-  } 
-  else if (dist(mouseX, mouseY, speaker.prevX, speaker.prevY) < 15) {
+  } else if (dist(mouseX, mouseY, speaker.prevX, speaker.prevY) < 15) {
     if (speaker.isConnected && speaker.isCharged) {
       speaker.isPlaying = false;
       speaker.isNext = false;
       speaker.isPrev = true;
     }
-  } 
-  else if (dist(mouseX, mouseY, speaker.chargeX, speaker.chargeY) < 5) {
+  } else if (dist(mouseX, mouseY, speaker.chargeX, speaker.chargeY) < 5) {
     if (speaker.isPowered)
       speaker.isCharged = !speaker.isCharged;
-      if(!speaker.isCharged){
-        speaker.isPrev=false;
-        speaker.isPlaying=false;
-        speaker.isNext=false;
-      }
-  } 
-  else if (dist(mouseX, mouseY, speaker.connectX, speaker.connectY) < 5) {
+    if (!speaker.isCharged) {
+      speaker.isPrev = false;
+      speaker.isPlaying = false;
+      speaker.isNext = false;
+    }
+  } else if (dist(mouseX, mouseY, speaker.connectX, speaker.connectY) < 5) {
     if (speaker.isPowered && speaker.isCharged)
       speaker.isConnected = !speaker.isConnected;
-    if(!speaker.isConnected){
-      speaker.isPrev=false;
-      speaker.isPlaying=false;
-      speaker.isNext=false;
+    if (!speaker.isConnected) {
+      speaker.isPrev = false;
+      speaker.isPlaying = false;
+      speaker.isNext = false;
     }
   }
+}
+
+function mouseHover() {
+  if (dist(mouseX, mouseY, speaker.powerX, speaker.powerY) < 15) {
+    cursor(HAND);
+  } else if (dist(mouseX, mouseY, speaker.playX, speaker.playY) < 15) {
+    cursor(HAND);
+  } else if (dist(mouseX, mouseY, speaker.nextX, speaker.nextY) < 15) {
+    cursor(HAND);
+  } else if (dist(mouseX, mouseY, speaker.prevX, speaker.prevY) < 15) {
+    cursor(HAND);
+  } else if (dist(mouseX, mouseY, speaker.chargeX, speaker.chargeY) < 5) {
+    cursor(HAND);
+  } else if (dist(mouseX, mouseY, speaker.playX, speaker.playY) < 15) {
+    cursor(HAND);
+  } else if (dist(mouseX, mouseY, speaker.nextX, speaker.nextY) < 15) {
+    cursor(HAND);
+  } else if (dist(mouseX, mouseY, speaker.prevX, speaker.prevY) < 15) {
+    cursor(HAND);
+  } else if (dist(mouseX, mouseY, speaker.chargeX, speaker.chargeY) < 5) {
+    cursor(HAND);
+  } else if (dist(mouseX, mouseY, speaker.connectX, speaker.connectY) < 5) {
+    cursor(HAND);
+  }
+ else if (dist(mouseX, mouseY, speaker.connectX, speaker.connectY) < 5) {
+    cursor(HAND);
+  }
+  else
+    cursor(ARROW);
 }
 
 
@@ -275,12 +300,12 @@ function checkStates() {
     if (!speaker.isCharged)
       return activeState = 'S7';
     else if (speaker.isPlaying)
-      return activeState = 'S4';
+    return activeState = 'S4';
   else if (speaker.isNext)
     return activeState = 'S6';
   else if (speaker.isPrev)
     return activeState = 'S5';
-  else if(speaker.isConnected)
+  else if (speaker.isConnected)
     return activeState = 'S3';
   else
     return activeState = 'S2';
