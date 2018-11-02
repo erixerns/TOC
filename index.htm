@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TOC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./lib/p5.js"></script>
+  <script src="./sketch.js"></script>
+</head>
+
+<body>
+
+
+  <style>
+    html, body{
+      height: 100%!important;
+    }
+    svg{
+      position: absolute;
+      left: 40%;
+    }
+  </style>
+
+  <?xml version="1.0" standalone="no"?>
+  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+  <svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <ellipse stroke="black" stroke-width="1" fill="none" cx="45.5" cy="244.5" rx="30" ry="30" />
+    <text x="34.5" y="250.5" font-family="Times New Roman" font-size="20">S1</text>
+    <ellipse stroke="black" stroke-width="1" fill="none" cx="208.5" cy="244.5" rx="30" ry="30" />
+    <text x="197.5" y="250.5" font-family="Times New Roman" font-size="20">S2</text>
+    <ellipse stroke="black" stroke-width="1" fill="none" cx="412.5" cy="244.5" rx="30" ry="30" />
+    <text x="401.5" y="250.5" font-family="Times New Roman" font-size="20">S3</text>
+    <ellipse stroke="black" stroke-width="1" fill="none" cx="534.5" cy="244.5" rx="30" ry="30" />
+    <text x="523.5" y="250.5" font-family="Times New Roman" font-size="20">S4</text>
+    <ellipse stroke="black" stroke-width="1" fill="none" cx="534.5" cy="88.5" rx="30" ry="30" />
+    <text x="523.5" y="94.5" font-family="Times New Roman" font-size="20">S5</text>
+    <ellipse stroke="black" stroke-width="1" fill="none" cx="644.5" cy="244.5" rx="30" ry="30" />
+    <text x="633.5" y="250.5" font-family="Times New Roman" font-size="20">S6</text>
+    <ellipse stroke="black" stroke-width="1" fill="none" cx="534.5" cy="367.5" rx="30" ry="30" />
+    <text x="523.5" y="373.5" font-family="Times New Roman" font-size="20">S7</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 71.229,229.192 A 135.061,135.061 0 0 1 182.771,229.192" />
+    <polygon fill="black" stroke-width="1" points="182.771,229.192 177.55,221.334 173.421,230.442" />
+    <text x="86.5" y="208.5" font-family="Times New Roman" font-size="20">Power On</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 234.176,229.056 A 173.628,173.628 0 0 1 386.824,229.056" />
+    <polygon fill="black" stroke-width="1" points="386.824,229.056 381.837,221.048 377.441,230.03" />
+    <text x="267.5" y="202.5" font-family="Times New Roman" font-size="20">Connected</text>
+    <polygon stroke="black" stroke-width="1" points="442.5,244.5 504.5,244.5" />
+    <polygon fill="black" stroke-width="1" points="504.5,244.5 496.5,239.5 496.5,249.5" />
+    <text x="455.5" y="265.5" font-family="Times New Roman" font-size="20">Play</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 522.512,217.046 A 161.312,161.312 0 0 1 522.512,115.954" />
+    <polygon fill="black" stroke-width="1" points="522.512,115.954 515.257,121.984 524.754,125.117" />
+    <text x="472.5" y="172.5" font-family="Times New Roman" font-size="20">Prev</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 615.381,251.557 A 172.345,172.345 0 0 1 563.619,251.557" />
+    <polygon fill="black" stroke-width="1" points="615.381,251.557 606.721,247.815 608.222,257.702" />
+    <text x="570.5" y="274.5" font-family="Times New Roman" font-size="20">Next</text>
+    <polygon stroke="black" stroke-width="1" points="534.5,274.5 534.5,337.5" />
+    <polygon fill="black" stroke-width="1" points="534.5,337.5 539.5,329.5 529.5,329.5" />
+    <text x="438.5" y="312.5" font-family="Times New Roman" font-size="20">Discharged</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 504.596,367.403 A 108.507,108.507 0 0 1 412.353,274.404" />
+    <polygon fill="black" stroke-width="1" points="412.353,274.404 408.461,282.998 418.372,281.669" />
+    <text x="370.5" y="357.5" font-family="Times New Roman" font-size="20">Charged</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 384.873,256.139 A 227.629,227.629 0 0 1 236.127,256.139" />
+    <polygon fill="black" stroke-width="1" points="236.127,256.139 242.054,263.479 245.321,254.028" />
+    <text x="256.5" y="289.5" font-family="Times New Roman" font-size="20">Disconnected</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 180.476,255.122 A 191.001,191.001 0 0 1 73.524,255.122" />
+    <polygon fill="black" stroke-width="1" points="73.524,255.122 79.804,262.162 82.604,252.562" />
+    <text x="85.5" y="283.5" font-family="Times New Roman" font-size="20">Power Off</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 223.474,218.519 A 297.798,297.798 0 0 1 504.874,83.861" />
+    <polygon fill="black" stroke-width="1" points="223.474,218.519 232.013,214.509 223.611,209.086" />
+    <text x="232.5" y="102.5" font-family="Times New Roman" font-size="20">Disconnected</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 650.807,273.807 A 226.712,226.712 0 1 1 202.193,273.807" />
+    <polygon fill="black" stroke-width="1" points="202.193,273.807 196.084,280.996 205.978,282.449" />
+    <text x="372.5" y="554.5" font-family="Times New Roman" font-size="20">Disconnected</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 508.098,381.697 A 218.508,218.508 0 0 1 218.944,272.598" />
+    <polygon fill="black" stroke-width="1" points="508.098,381.697 498.749,380.438 502.87,389.549" />
+    <text x="248.5" y="409.5" font-family="Times New Roman" font-size="20">Discharged</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 228.031,221.765 A 202.567,202.567 0 0 1 514.969,221.765" />
+    <polygon fill="black" stroke-width="1" points="228.031,221.765 237.22,219.628 230.137,212.569" />
+    <text x="317.5" y="153.5" font-family="Times New Roman" font-size="20">Disconnected</text>
+    <polygon stroke="black" stroke-width="1" points="624.501,266.862 554.499,345.138" />
+    <polygon fill="black" stroke-width="1" points="554.499,345.138 563.558,342.508 556.104,335.842" />
+    <text x="594.5" y="326.5" font-family="Times New Roman" font-size="20">Discharged</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 564.376,86.491 A 141.615,141.615 0 0 1 564.376,369.509" />
+    <polygon fill="black" stroke-width="1" points="564.376,369.509 572.564,374.195 572.177,364.202" />
+    <text x="705.5" y="234.5" font-family="Times New Roman" font-size="20">Discharged</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 550.131,114.023 A 125.803,125.803 0 0 1 550.131,218.977" />
+    <polygon fill="black" stroke-width="1" points="550.131,218.977 558.013,213.792 548.924,209.621" />
+    <text x="566.5" y="172.5" font-family="Times New Roman" font-size="20">Play</text>
+    <path stroke="black" stroke-width="1" fill="none" d="M 559.909,228.867 A 82.081,82.081 0 0 1 619.091,228.867" />
+    <polygon fill="black" stroke-width="1" points="559.909,228.867 569.174,230.647 565.569,221.319" />
+    <text x="571.5" y="214.5" font-family="Times New Roman" font-size="20">Play</text>
+  </svg>
+
+</body>
+
+</html>
